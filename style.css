@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("/font/BYekan-webfont.eot") format("eot"),
+        url("/font/BYekan-webfont.woff") format("woff"),
+        url("/font/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "BYekan";
+    font-size: 15px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100.5vh;
+    align-items: center;
+    background: #434750; 
+}
+ul{
+    position: relative;
+    transform:skewY(-15deg) ;
+    transition: 0.05s;
+    -webkit-transform:skewY(-15deg) ;
+    -moz-transform:skewY(-15deg) ;
+    -ms-transform:skewY(-15deg) ;
+    -o-transform:skewY(-15deg) ;
+}
+
+ul li{
+    width: 220px;
+    position: relative;
+    list-style: none;
+    /* height: 40px; */
+    align-items: center;
+    z-index: var(--i);
+   }
+ul li :hover{
+    background: #33a3ee;
+    transform: translateX(-50px);
+}
+ul li ::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 40px;
+    height: 100%;
+    background: #2e3133;
+    transform-origin: right;
+    transition: 0.05s;
+    transform: skewY(45deg);
+   
+}
+ul li:hover ::before{
+    background:#1f5378
+}
+ul li ::after{
+    content: '';
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #35383e;
+    width: 100%;
+    height: 40px;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.05s;
+}
+ul li:hover ::after{
+    background:#2982b9
+
+}
+ul li a{
+    background: #3e3f46;
+    display: flex;
+    text-decoration: none;
+    color: #999;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    font-size: 15px;
+ 
+}
+ul li:hover a{
+    color: #fff;
+}
+ul li:last-child ::after{
+    box-shadow: -120px 120px 20px rgba(0,0,0,0.25);
+}
+i{
+    margin: 5px;
+}
